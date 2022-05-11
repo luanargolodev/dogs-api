@@ -5,16 +5,21 @@ const App = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function getImage() {
-      const response = await fetch('https://dog.ceo/api/breeds/image/random');
-      const json = await response.json();
-      setData(json);
-      setLoading(false);
-    }
+  async function getImage() {
+    setLoading(true);
+    const response = await fetch('https://dog.ceo/api/breeds/image/random');
+    const json = await response.json();
+    setData(json);
+    setLoading(false);
+  }
 
+  useEffect(() => {
     getImage();
   }, []);
+
+  function handleImage() {
+    getImage();
+  }
 
   return (
     <>
@@ -29,7 +34,9 @@ const App = () => {
             <div className="card">
               <img className="image" src={data.message} alt="Cachorro" />
             </div>
-            <button className="button">Buscar outro cachorro</button>
+            <button className="button" onClick={handleImage}>
+              Buscar outro cachorro
+            </button>
           </main>
         </div>
       )}
