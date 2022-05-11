@@ -65,4 +65,5 @@ header {
 
 .button:hover {
   background-color: #f00;
+  font-size: 1.5rem;
 }
