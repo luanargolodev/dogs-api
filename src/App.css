@@ -35,7 +35,7 @@ header {
 }
 
 .image {
-  width: 100%;
+  width: 400px;
 }
 
 .loading {
@@ -45,4 +45,24 @@ header {
   height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #fb3;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.button:hover {
+  background-color: #f00;
 }

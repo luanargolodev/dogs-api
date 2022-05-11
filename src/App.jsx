@@ -27,9 +27,9 @@ const App = () => {
           </header>
           <main>
             <div className="card">
-              <img src={data.message} alt="Cachorro" />
-              <button className="button">Buscar outro cachorro</button>
+              <img className="image" src={data.message} alt="Cachorro" />
             </div>
+            <button className="button">Buscar outro cachorro</button>
           </main>
         </div>
       )}
